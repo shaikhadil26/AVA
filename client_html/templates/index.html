@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if image_data %}
+        <h2>Uploaded Image:</h2>
+        <img src="data:image/jpeg;base64,{{ image_data }}" alt="Uploaded Image", style="max-width: 100%; height: auto;">
+        <h2>Caption:</h2>
+        <p>{{ caption }}</p>
+        <h3>Processing Time: {{ processing_time }} seconds</h3>
+    {% endif %}
+</body>
+</html>
