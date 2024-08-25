@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depth Estimation Webpage</title>
+    <style>
+        #videoElement {
+            display: none;
+        }
+        #depthMap {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Depth Estimation Using MiDaS Model</h1>
+        <img id="depthMap" src="{{ url_for('video_feed') }}" alt="Depth Map">
+
+        <div class="button-container">
+            <button id="startButton">Start Video</button>
+            <button id="stopButton" disabled>Stop Video</button>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const depthMap = document.getElementById('depthMap');
+
+        startButton.addEventListener('click', () => {
+            depthMap.style.display = 'block';
+            startButton.disabled = true;
+            stopButton.disabled = false;
+        });
+
+        stopButton.addEventListener('click', () => {
+            depthMap.style.display = 'none';
+            startButton.disabled = false;
+            stopButton.disabled = true;
+        });
+    </script>
+</body>
+</html>
