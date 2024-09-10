@@ -2,6 +2,7 @@ from PIL import Image
 import requests
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 import torch
+import pyttsx3
 
 device = torch.device("mps")
 
@@ -24,4 +25,7 @@ inputs = processor(images=image, text=prompt, return_tensors="pt").to(device, dt
 
 generated_ids = model.generate(**inputs)
 generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0].strip()
-print(generated_text)
+# print(generated_text)
+engine = pyttsx3.init()
+engine.say(generated_text)
+engine.runAndWait()
