@@ -1,5 +1,8 @@
 .env 
-
+*.jpg
+*.mp4
+*.MOV
+*.json
 .venv
 .DS_Store
 __pycache__
