@@ -1,7 +1,11 @@
 .env 
-
+*.jpg
+*.mp4
+*.MOV
+*.json
 .venv
 .DS_Store
+__pycache__
 
 images/
 received_images/
@@ -10,3 +14,5 @@ test/
 img_cap_test/
 videos/
 sih/
+deprec/
+client_html/
