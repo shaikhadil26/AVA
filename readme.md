@@ -1,4 +1,4 @@
-# Assistive Device for the Visually Impaired
+# AVA : Ai-powered Vision Assistant
 
 This project aims to create an affordable and effective assistive device with minimal hardware requirements for visually impaired individuals. The device uses advanced deep learning and computer vision techniques to provide three core functionalities:
 - **Obstacle Avoidance**: Alerts the user to nearby obstacles, helping them navigate safely.
