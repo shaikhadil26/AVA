@@ -47,7 +47,7 @@ AVA leverages cutting-edge computer vision and AI models to interpret and respon
 
 ### 2. Scene Description
 
-- **Model**: [shaikhadil26/blip2-opt-2.7b-image-description-v2](https://huggingface.co/shaikhadil26/blip2-opt-2.7b-image-description-v2), Fine-tuned [BLIP2-OPT2.7B](https://huggingface.co/Salesforce/blip2-opt-2.7b) using [PEFT: LoRA](https://github.com/microsoft/LoRA)}.
+- **Model**: [shaikhadil26/blip2-opt-2.7b-image-description-v2](https://huggingface.co/shaikhadil26/blip2-opt-2.7b-image-description-v2), Fine-tuned [BLIP2-OPT2.7B](https://huggingface.co/Salesforce/blip2-opt-2.7b) using [PEFT: LoRA](https://github.com/microsoft/LoRA).
 - **Datasets**: Trained on [sezenkarakus/image-description-dataset](https://huggingface.co/datasets/sezenkarakus/image-description-dataset) and [sezenkarakus/image-description-dataset-v2](https://huggingface.co/datasets/sezenkarakus/image-description-dataset-v2).
 - **API**: A FastAPI server (see `src/apis/scene_description.ipynb`) exposes an endpoint for image uploads. The server returns a generated scene description.
 
